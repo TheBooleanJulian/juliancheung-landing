@@ -8,5 +8,5 @@ Personal landing page for Julian Cheung Jun Yan, spanning his three ventures:
 
 ## Files
 
-- [julian-cheung-jy.html](julian-cheung-jy.html) — standalone static HTML version
+- [index.html](index.html) — standalone static HTML version, served as the site root
 - [template-landing.php](template-landing.php) — WordPress page template; edit the content variables at the top of the file, the HTML/CSS below doesn't need to change
