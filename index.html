@@ -34,6 +34,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hbgl{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 18% 55%,rgba(245,200,66,0.07) 0%,transparent 60%);pointer-events:none}
 .hbgr{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 82% 45%,rgba(0,212,200,0.08) 0%,transparent 60%);pointer-events:none}
 .hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.022) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 70% at 50% 50%,black 0%,transparent 100%);pointer-events:none}
+.hring{position:absolute;top:50%;left:50%;width:min(760px,90vw);height:min(760px,90vw);transform:translate(-50%,-50%);pointer-events:none;opacity:.55}
+.hring circle{animation:hspin 90s linear infinite;transform-origin:center}
+.hring .r2{animation-direction:reverse;animation-duration:70s}
+@keyframes hspin{to{transform:rotate(360deg)}}
 .hc{position:relative;z-index:1;text-align:center;max-width:880px;width:100%}
 .hey{font-family:var(--fm);font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:24px;display:flex;align-items:center;justify-content:center;gap:10px}
 .hey::before,.hey::after{content:'';display:block;width:32px;height:1px;background:var(--teal);opacity:.5}
@@ -163,7 +167,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .svc-t{font-size:15px;font-weight:600;margin-bottom:4px}
 .svc-d{font-size:13px;color:var(--t2);line-height:1.6}
 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:155px 95px 155px;gap:6px;border-radius:var(--r);overflow:hidden}
-.pc{border-radius:4px;position:relative;overflow:hidden}
+.pc{border-radius:4px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.pc svg{width:34%;height:34%;opacity:.5;stroke:#fff;transition:opacity .3s,transform .3s}
+.pc:hover svg{opacity:.85;transform:scale(1.08)}
 .pc::after{content:attr(data-label);position:absolute;bottom:8px;left:8px;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.7);background:rgba(0,0,0,.4);padding:3px 7px;border-radius:3px;backdrop-filter:blur(4px)}
 .pc:nth-child(1){background:linear-gradient(135deg,#1A0F00,#4A2800);grid-column:1/3}
 .pc:nth-child(2){background:linear-gradient(135deg,#0A0F1A,#132040)}
@@ -244,6 +250,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .tq{font-size:13px;color:var(--t1);line-height:1.75;margin-bottom:18px;font-style:italic}
 .tq::before{content:'"';color:var(--teal);font-style:normal}
 .tq::after{content:'"';color:var(--teal);font-style:normal}
+.tfoot{display:flex;align-items:center;gap:10px}
+.tav{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:12px;font-weight:700;flex-shrink:0}
+.tav.c1{background:var(--gold-dim);color:var(--gold)}.tav.c2{background:var(--teal-dim);color:var(--teal)}.tav.c3{background:var(--purple-dim);color:var(--purple)}
 .tp2{font-size:13px;font-weight:600;color:var(--t2)}.tr{font-size:12px;color:var(--t3);margin-top:2px}
 
 /* ── FAQ ── */
@@ -311,6 +320,15 @@ footer{background:var(--void);border-top:1px solid var(--border);padding:28px 40
 <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
 <section id="hero">
   <div class="hbgl"></div><div class="hbgr"></div><div class="hgrid"></div>
+  <svg class="hring" viewBox="0 0 400 400" fill="none">
+    <circle class="r1" cx="200" cy="200" r="176" stroke="url(#hg1)" stroke-width="1" stroke-dasharray="2 10" stroke-linecap="round"/>
+    <circle class="r2" cx="200" cy="200" r="140" stroke="url(#hg2)" stroke-width="1" stroke-dasharray="1 14" stroke-linecap="round"/>
+    <circle cx="200" cy="200" r="104" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <defs>
+      <linearGradient id="hg1" x1="0" y1="0" x2="400" y2="400"><stop offset="0" stop-color="#F5C842"/><stop offset="1" stop-color="#00D4C8"/></linearGradient>
+      <linearGradient id="hg2" x1="400" y1="0" x2="0" y2="400"><stop offset="0" stop-color="#9B7FFF"/><stop offset="1" stop-color="#00D4C8"/></linearGradient>
+    </defs>
+  </svg>
   <div class="hc">
     <div class="hey">Singapore · NUS Engineering · SME500 2026</div>
     <h1 class="hname">
@@ -617,12 +635,12 @@ footer{background:var(--void);border-top:1px solid var(--border);padding:28px 40
       </div>
       <div>
         <div class="pgrid">
-          <div class="pc" data-label="Corporate"></div>
-          <div class="pc" data-label="Night"></div>
-          <div class="pc" data-label="Cosplay"></div>
-          <div class="pc" data-label="Portrait"></div>
-          <div class="pc" data-label="Events"></div>
-          <div class="pc" data-label="Astrophotography"></div>
+          <div class="pc" data-label="Corporate"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M3 8h4l2-3h6l2 3h4v11H3z" stroke-linejoin="round"/><circle cx="12" cy="13.5" r="3.3"/></svg></div>
+          <div class="pc" data-label="Night"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.4 6.4 0 0 0 10.5 10.5z" stroke-linejoin="round"/></svg></div>
+          <div class="pc" data-label="Cosplay"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M4 9c2-3 5-4 8-4s6 1 8 4c-1 1.5-2 2-2 2s1 3-2 5c-1.5 1-2.5 1-4 1s-2.5 0-4-1c-3-2-2-5-2-5s-1-.5-2-2Z" stroke-linejoin="round"/></svg></div>
+          <div class="pc" data-label="Portrait"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><circle cx="12" cy="8.2" r="3.6"/><path d="M4.5 20c1-4.2 4-6.3 7.5-6.3S18.5 15.8 19.5 20" stroke-linecap="round"/></svg></div>
+          <div class="pc" data-label="Events"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><rect x="4" y="5" width="16" height="15" rx="1.5"/><path d="M4 9.5h16M8 3v3.5M16 3v3.5" stroke-linecap="round"/></svg></div>
+          <div class="pc" data-label="Astrophotography"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M4 19 15 4l1.5 6.5L21 12 9 20z" stroke-linejoin="round"/><circle cx="16.7" cy="8.3" r="1"/></svg></div>
         </div>
         <div style="margin-top:28px;font-family:var(--fm);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--t3);margin-bottom:8px">Specialisations</div>
         <div class="svc-item"><div class="svc-n">01</div><div><div class="svc-t">Corporate & Event Photography</div><div class="svc-d">Conferences, product launches, brand activations, BNI events — the moments that matter for your business.</div></div></div>
@@ -788,12 +806,12 @@ footer{background:var(--void);border-top:1px solid var(--border);padding:28px 40
       <h2 class="stit">Trusted By Many</h2>
     </div>
     <div class="tgrid">
-      <div class="tc"><div class="tst">★★★★★</div><div class="tq">Julian is a long-time photographer of mine, and a friend. Even with his affordable rates, he constantly upgrades his equipment and researches advanced techniques. His dedication to clients has been steadfast. Highly recommended.</div><div class="tp2">Wah Qi Le</div><div class="tr">Wahsoshiok</div></div>
-      <div class="tc"><div class="tst">★★★★★</div><div class="tq">Fantastic dynamic and well-timed photographs that really bring out the essence of the character I'm cosplaying. Very helpful and patient — especially since I am shy and inexperienced behind the camera.</div><div class="tp2">ZY</div><div class="tr">Cosplayer</div></div>
-      <div class="tc"><div class="tst">★★★★★</div><div class="tq">Julian was a great photographer to work with. His passion and professionalism can be seen in the quality photos he took. My associates and I will continue to engage his services in the future.</div><div class="tp2">Abdul Qayyum</div><div class="tr">NUS Political Association</div></div>
-      <div class="tc"><div class="tst">★★★★★</div><div class="tq">Great communication, super easy to work with. Takes the cosplayer's opinion into consideration when planning. Perhaps because he does tutoring — very good at explaining things too!</div><div class="tp2">Babbit</div><div class="tr">Cosplayer</div></div>
-      <div class="tc"><div class="tst">★★★★★</div><div class="tq">Although not familiar with beauty events, he was very proactive and quick in learning. Meticulous, responsible, and clearly passionate. Would definitely engage again.</div><div class="tp2">Xie Jingyi</div><div class="tr">BREAVACO</div></div>
-      <div class="tc"><div class="tst">★★★★★</div><div class="tq">The photos turned out so beautiful we want to print and frame them. You have been really sweet, kind and patient throughout. Thank you for all your efforts!</div><div class="tp2">Nilima</div><div class="tr">Maternity Client</div></div>
+      <div class="tc"><div class="tst">★★★★★</div><div class="tq">Julian is a long-time photographer of mine, and a friend. Even with his affordable rates, he constantly upgrades his equipment and researches advanced techniques. His dedication to clients has been steadfast. Highly recommended.</div><div class="tfoot"><div class="tav c1">WQ</div><div><div class="tp2">Wah Qi Le</div><div class="tr">Wahsoshiok</div></div></div></div>
+      <div class="tc"><div class="tst">★★★★★</div><div class="tq">Fantastic dynamic and well-timed photographs that really bring out the essence of the character I'm cosplaying. Very helpful and patient — especially since I am shy and inexperienced behind the camera.</div><div class="tfoot"><div class="tav c2">ZY</div><div><div class="tp2">ZY</div><div class="tr">Cosplayer</div></div></div></div>
+      <div class="tc"><div class="tst">★★★★★</div><div class="tq">Julian was a great photographer to work with. His passion and professionalism can be seen in the quality photos he took. My associates and I will continue to engage his services in the future.</div><div class="tfoot"><div class="tav c3">AQ</div><div><div class="tp2">Abdul Qayyum</div><div class="tr">NUS Political Association</div></div></div></div>
+      <div class="tc"><div class="tst">★★★★★</div><div class="tq">Great communication, super easy to work with. Takes the cosplayer's opinion into consideration when planning. Perhaps because he does tutoring — very good at explaining things too!</div><div class="tfoot"><div class="tav c1">BB</div><div><div class="tp2">Babbit</div><div class="tr">Cosplayer</div></div></div></div>
+      <div class="tc"><div class="tst">★★★★★</div><div class="tq">Although not familiar with beauty events, he was very proactive and quick in learning. Meticulous, responsible, and clearly passionate. Would definitely engage again.</div><div class="tfoot"><div class="tav c2">XJ</div><div><div class="tp2">Xie Jingyi</div><div class="tr">BREAVACO</div></div></div></div>
+      <div class="tc"><div class="tst">★★★★★</div><div class="tq">The photos turned out so beautiful we want to print and frame them. You have been really sweet, kind and patient throughout. Thank you for all your efforts!</div><div class="tfoot"><div class="tav c3">N</div><div><div class="tp2">Nilima</div><div class="tr">Maternity Client</div></div></div></div>
     </div>
   </div>
 </section>
