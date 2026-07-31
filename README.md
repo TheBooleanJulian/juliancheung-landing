@@ -7,7 +7,7 @@
 ![HTML](https://img.shields.io/badge/-HTML-E34F26?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/-CSS-1572B6?logo=css3&logoColor=white)
 ![PHP](https://img.shields.io/badge/-PHP-777BB4?logo=php&logoColor=white)
-![License](https://img.shields.io/badge/license-MIT-00D4C8.svg)
+![License](https://img.shields.io/badge/license-AGPLv3%20%2F%20Commercial-00D4C8.svg)
 
 </div>
 
@@ -15,14 +15,16 @@
 
 ## What it does
 
-A minimal static landing page that serves as the public face for Julian Cheung Jun Yan, surfacing his three active ventures — Accurova (photography & digital media), TheBooleanJulian (software & automation), and Educare4u (private tuition in Science & Maths) — from a single URL at [juliancheung.com](https://juliancheung.com/).
+A polished personal landing page for Julian Cheung Jun Yan that brings together his photography, software, education, and BNI networking presence in one place. The site is designed to feel modern and editorial while remaining simple to host and maintain.
 
 ## Features
 
-- Single-page hub linking all three ventures with shared CSS styling
-- BNI biography subpage for networking/referral context, linked from the contact section
+- Modern single-page experience with a cinematic hero section and animated visual treatment
+- Clear top navigation with button-style CTAs, including a dedicated BNI profile link
+- Sections for story, framework, ventures, community, and contact-driven conversion
+- BNI biography subpage for referral and networking context
 - WordPress-compatible PHP template for drop-in use as a page template
-- Standalone static HTML version (`index.html`) for zero-dependency hosting
+- Standalone static HTML version for zero-dependency hosting
 
 ## Tech Stack
 
@@ -35,29 +37,48 @@ A minimal static landing page that serves as the public face for Julian Cheung J
 
 ```
 juliancheung-landing/
-|-- index.html              # Static site root
-|-- landing-style.css       # Shared styles for the landing page
+|-- index.html              # Main landing page (single-page site)
+|-- landing-style.css       # Companion stylesheet for the landing page
 |-- bni-bio.html            # BNI biography subpage
-|-- bni-bio-style.css       # Styles for BNI subpage
+|-- bni-bio-style.css       # Styles for the BNI subpage
 `-- template-landing.php    # WordPress page template
 ```
 
 ## Status / Roadmap
 
-- [x] Static landing page live at juliancheung.com
-- [x] BNI biography subpage
-- [x] Shared CSS extracted for maintainability
-- [x] WordPress PHP template
+- [x] Static landing page ready for publishing
+- [x] BNI biography subpage included
+- [x] Header CTAs and BNI profile button refined for clearer action
+- [x] WordPress PHP template included
+
+## Future Roadmap
+
+- [ ] Open Graph / Twitter card meta tags so links preview properly when shared (LinkedIn, WhatsApp, etc.)
+- [ ] `sitemap.xml` and `robots.txt` for search indexing
+- [ ] Lighthouse pass for performance/accessibility (contrast, alt text, reduced-motion support for the animated hero)
+- [ ] Structured data (`schema.org/Person`) so search engines can surface the ventures directly
+- [ ] Lightweight, privacy-respecting analytics (e.g. Plausible/Fathom) to see which venture links get clicked
+- [ ] Automated visual regression check (e.g. Percy or a simple Playwright screenshot diff) before publishing changes
+- [ ] Basic HTML/CSS lint + link-checker in CI
+- [ ] Sync content between `index.html` and `template-landing.php` via a shared data source instead of hand-editing both
 
 ## Changelog
 
-- **2026-06-27** — Added BNI biography sheet as a subpage (`bni-bio.html`), linked from the main contact section
-- **2026-06-27** — Extracted shared styles into `landing-style.css`; renamed entry file to `index.html`
-- **2026-06-27** — Initial landing page commit
+Versioned loosely as `major.minor` — major for structural/licensing changes, minor for content or feature additions.
+
+- **v1.3 — 2026-07-31** — Switched to a dual AGPLv3 / commercial license
+- **v1.2 — 2026-07-31** — Refined header with button-style CTAs and a dedicated BNI profile action
+- **v1.1 — 2026-07-30** — Added abstract SVG graphics to hero/photo grid/testimonials, corrected the origin story timeline, linked the BNI bio page, and rebranded the tutoring venture
+- **v1.0 — 2026-07-18** — Revamped README with badges and structure; refreshed `index.html`
+- **v0.2 — 2026-06-27** — Added the BNI biography sheet as a subpage (`bni-bio.html`)
+- **v0.1 — 2026-06-27** — Extracted shared styles into `landing-style.css`, standardized the entry file as `index.html`, initial landing page commit
 
 ## License
 
-MIT
+This project is dual licensed.
+
+- Community Edition — [GNU Affero General Public License v3 (AGPLv3)](LICENSE). Free to use, modify, and self-host. If you distribute a modified version or run it as a network service, you must make the corresponding source available.
+- Commercial License — for organisations that want to embed, modify, or distribute this software without AGPLv3's obligations. See [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md).
 
 ---
 
