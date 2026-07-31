@@ -20,6 +20,7 @@ A polished personal landing page for Julian Cheung Jun Yan that brings together 
 ## Features
 
 - Modern single-page experience with a cinematic hero section and animated visual treatment
+- Hero centerpiece with a tilted, Saturn-ring-style orbit around a portrait photo, with icon+label satellites for each of Julian's focuses (photography, development, engineering, teaching, networking) that scale and layer in front of/behind the photo as they orbit
 - Clear top navigation with button-style CTAs, including a dedicated BNI profile link
 - Sections for story, framework, ventures, community, and contact-driven conversion
 - BNI biography subpage for referral and networking context
@@ -66,6 +67,7 @@ juliancheung-landing/
 
 Versioned loosely as `major.minor` — major for structural/licensing changes, minor for content or feature additions.
 
+- **v1.4 — 2026-07-31** — Added an animated Saturn-ring-style photo orbit to the hero with per-focus icon/label satellites, moved the name to a single-line heading with an oversized faded wordmark behind the orbit, and fixed centering/spacing issues that came with it
 - **v1.3 — 2026-07-31** — Switched to a dual AGPLv3 / commercial license
 - **v1.2 — 2026-07-31** — Refined header with button-style CTAs and a dedicated BNI profile action
 - **v1.1 — 2026-07-30** — Added abstract SVG graphics to hero/photo grid/testimonials, corrected the origin story timeline, linked the BNI bio page, and rebranded the tutoring venture
