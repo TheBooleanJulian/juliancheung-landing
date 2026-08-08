@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/juliancheung-logo.png" alt="Julian Cheung logo" width="160">
+
 # Julian Cheung — Landing Page
 
 **Personal landing page for Julian Cheung Jun Yan, linking his three ventures in one place.**
