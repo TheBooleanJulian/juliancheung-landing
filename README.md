@@ -24,6 +24,7 @@ A polished personal landing page for Julian Cheung Jun Yan that brings together 
 - Clear top navigation with button-style CTAs, including a dedicated BNI profile link
 - Sections for story, framework, ventures, community, and contact-driven conversion
 - BNI biography subpage for referral and networking context
+- Branded logo mark used consistently across the main nav, favicon, and BNI subpage header
 - WordPress-compatible PHP template for drop-in use as a page template
 - Standalone static HTML version for zero-dependency hosting
 
@@ -42,7 +43,10 @@ juliancheung-landing/
 |-- landing-style.css       # Companion stylesheet for the landing page
 |-- bni-bio.html            # BNI biography subpage
 |-- bni-bio-style.css       # Styles for the BNI subpage
-`-- template-landing.php    # WordPress page template
+|-- template-landing.php    # WordPress page template
+`-- assets/                 # Logo, hero photo, and other static images
+    |-- juliancheung-logo.png
+    `-- hero-julian.png
 ```
 
 ## Status / Roadmap
@@ -67,6 +71,7 @@ juliancheung-landing/
 
 Versioned loosely as `major.minor` — major for structural/licensing changes, minor for content or feature additions.
 
+- **v1.5 — 2026-08-09** — Corrected the origin story timeline with verified career dates (Micron, Educare4u, Accurova's ACRA registration, TheBooleanJulian's ramp-up, BNI Crescendo), and added the branded logo mark to the nav, favicon, and BNI subpage header
 - **v1.4 — 2026-07-31** — Added an animated Saturn-ring-style photo orbit to the hero with per-focus icon/label satellites, moved the name to a single-line heading with an oversized faded wordmark behind the orbit, and fixed centering/spacing issues that came with it
 - **v1.3 — 2026-07-31** — Switched to a dual AGPLv3 / commercial license
 - **v1.2 — 2026-07-31** — Refined header with button-style CTAs and a dedicated BNI profile action
