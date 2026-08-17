@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp /tmp/agpl_license.txt \"i:/My Drive/TheBooleanJulian_GD/juliancheung-landing/LICENSE\")",
+      "Bash(cp /tmp/commercial_template.md \"i:/My Drive/TheBooleanJulian_GD/juliancheung-landing/COMMERCIAL-LICENSE-AGREEMENT-TEMPLATE.md\")",
+      "Bash(cp /tmp/trademarks.md \"i:/My Drive/TheBooleanJulian_GD/juliancheung-landing/TRADEMARKS.md\")",
+      "Bash(tail -30 /tmp/agpl_license.txt)",
+      "Read(//tmp/**)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "PowerShell(Start-Process \"i:\\\\My Drive\\\\TheBooleanJulian_GD\\\\juliancheung-landing\\\\index.html\")",
+      "Bash(npx --yes playwright --version)",
+      "Bash(node -e \"console.log\\(require\\('playwright'\\)\\)\")",
+      "Bash(cp /tmp/tmp.6qJKfzKOxI/hero.png \"/c/Users/julia/AppData/Local/Temp/claude/i--My-Drive-TheBooleanJulian-GD-juliancheung-landing/9d66bd83-a9a8-46ee-8c1e-97da425643f5/scratchpad/hero.png\")",
+      "Read(//c/Users/julia/AppData/Local/Temp/claude/i--My-Drive-TheBooleanJulian-GD-juliancheung-landing/9d66bd83-a9a8-46ee-8c1e-97da425643f5/scratchpad//**)",
+      "Bash(rm -rf /tmp/tmp.6qJKfzKOxI)",
+      "Bash(cp /tmp/pwtest/hero_t0.png /tmp/pwtest/hero_t7.png \"/c/Users/julia/AppData/Local/Temp/claude/i--My-Drive-TheBooleanJulian-GD-juliancheung-landing/9d66bd83-a9a8-46ee-8c1e-97da425643f5/scratchpad/\")",
+      "Bash(node shot3.js)",
+      "Bash(cp hero_fix.png \"/c/Users/julia/AppData/Local/Temp/claude/i--My-Drive-TheBooleanJulian-GD-juliancheung-landing/9d66bd83-a9a8-46ee-8c1e-97da425643f5/scratchpad/hero_fix2.png\")"
+    ],
+    "additionalDirectories": [
+      "\\tmp",
+      "C:\\Users\\julia\\AppData\\Local\\Temp\\claude\\i--My-Drive-TheBooleanJulian-GD-juliancheung-landing\\9d66bd83-a9a8-46ee-8c1e-97da425643f5\\scratchpad\\"
+    ]
+  }
+}
