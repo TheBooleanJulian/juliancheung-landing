@@ -37,6 +37,12 @@ A polished personal landing page for Julian Cheung Jun Yan that brings together 
 | Frontend | Single-file HTML + CSS |
 | WordPress variant | PHP page template |
 
+## Screenshots
+
+![Hero photo used on the landing page](assets/hero-julian.png)
+
+_Full-page screenshots coming soon — the images above are the site's actual logo and hero assets._
+
 ## Project Structure
 
 ```
