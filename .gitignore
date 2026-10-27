@@ -3,3 +3,6 @@ Thumbs.db
 *.log
 .vscode/
 node_modules/
+
+# Local tool state, never commit
+.claude/
